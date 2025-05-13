@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 245, 245, 245;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Animation pour les cartes Pokémon */
+@keyframes bounce-light {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Styles pour les barres de progression des statistiques */
+.stat-bar {
+  @apply h-2 rounded-full transition-all duration-500 ease-out;
+}
+
+/* Personnalisation de la scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Styles spécifiques pour les types de pokémon */
+.type-normal { @apply bg-gray-400 text-white; }
+.type-fire { @apply bg-red-500 text-white; }
+.type-water { @apply bg-blue-500 text-white; }
+.type-electric { @apply bg-yellow-400 text-gray-800; }
+.type-grass { @apply bg-green-500 text-white; }
+.type-ice { @apply bg-blue-300 text-gray-800; }
+.type-fighting { @apply bg-red-700 text-white; }
+.type-poison { @apply bg-purple-500 text-white; }
+.type-ground { @apply bg-yellow-600 text-white; }
+.type-flying { @apply bg-indigo-300 text-gray-800; }
+.type-psychic { @apply bg-pink-500 text-white; }
+.type-bug { @apply bg-lime-500 text-white; }
+.type-rock { @apply bg-yellow-800 text-white; }
+.type-ghost { @apply bg-purple-700 text-white; }
+.type-dragon { @apply bg-indigo-600 text-white; }
+.type-dark { @apply bg-gray-800 text-white; }
+.type-steel { @apply bg-gray-500 text-white; }
+.type-fairy { @apply bg-pink-300 text-gray-800; }
+
+/* Animation légère pour les images de Pokémon au survol */
+.pokemon-image:hover {
+  animation: bounce-light 1s ease infinite;
+}
+
+/* Styles pour les écrans de chargement */
+.loading-spinner {
+  @apply animate-spin text-blue-600;
+}
+
+/* Effet d'accentuation pour les Pokémon actuels dans la chaîne d'évolution */
+.evolution-current {
+  @apply ring-2 ring-blue-500 bg-blue-100;
+}
+
+/* Effet de carte au survol */
+.pokemon-card {
+  @apply transition-all duration-300;
+}
+
+.pokemon-card:hover {
+  @apply shadow-lg transform scale-105;
+}
