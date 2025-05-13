@@ -37,23 +37,9 @@ export default function PokemonsPage() {
     });
   };
 
-  // Styles en ligne pour la page
-  const styles = {
-    container: {
-      maxWidth: '1200px',
-      margin: '0 auto',
-      padding: '0 16px'
-    },
-    title: {
-      fontSize: '24px',
-      fontWeight: 'bold',
-      marginBottom: '16px'
-    }
-  };
-
   return (
-    <div style={styles.container}>
-      <h1 style={styles.title}>Liste des Pokémons</h1>
+    <div>
+      <h1 className="text-3xl font-bold mb-6">Liste des Pokémons</h1>
       
       {/* Composant de filtres */}
       <PokemonFilters
